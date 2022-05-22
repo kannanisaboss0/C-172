@@ -1,0 +1,159 @@
+/*-------------------------------------C-168--------------------------------------------------------*/
+/*--------------------------------Automobiles Galore--------------------------------------------------------*/
+/*-----------------------------------looks.css--------------------------------------------------------*/
+
+
+/*button styling*/
+button {
+    width:calc(100vw/3.2);
+    height:calc(100vh/15);
+    color:white;
+    border: 1.5px solid orange;
+    background-color:black;
+    
+}
+
+/*button styling when hovered over*/
+button:hover{
+    opacity:0.2
+}
+
+/*purchase button styling*/
+#purchase_btn{
+    margin-top:calc(100vh - 150px);
+    border-radius:10px;
+    font-family: "Gill Sans";
+    font-size:calc(100vh/52);
+    text-align:"center";
+    left:0;
+}
+
+/*info button styling*/
+#info_btn{
+    margin-top:calc(100vh - 150px);
+    border-radius:10px;
+    font-family: "Gill Sans";
+    font-size:calc(100vh/40);
+    align-items: center;  
+    left:0;
+}
+
+/*rate button styling*/
+#rate_btn{
+    margin-top:calc(100vh - 150px);
+    border-radius:10px;
+    font-family: "Gill Sans";
+    font-size:calc(100vh/52);
+    left:0;
+    
+}
+
+/*first division tag styling*/
+#div_btn_in {
+    display:none;
+    justify-content:space-between;
+    position:fixed;
+    bottom:10px;
+    width:100%;
+    z-index:1;
+    margin-top:0px;
+    
+    
+}
+
+/*second division tag styling*/
+#div_btn_fl {
+    display:flex;
+    position:fixed;
+    bottom:10px;
+}
+
+/*swal icon styling*/
+.swal-icon img{
+width:100px;
+height:80px;
+}
+
+/*swal text styling*/
+.swal-text {
+    text-align:justify;   
+}
+
+/*swal modal styling*/
+.swal-modal{
+ width:500px
+}
+
+/*swal overlay styling*/
+.swal-overlay {
+    background-color:rgba(22,194,213,0.8);
+}
+
+/*swal button styling*/
+.swal-button { 
+    text-transform: uppercase;
+    background-color: orange;
+    color:white;
+    padding:1%;
+    align-self:center
+ }
+
+/*swal footer styling*/
+.swal-footer {
+    text-align: center;
+  } 
+
+/*viewe orders button stlying*/
+#view_orders_btn {
+    width:100%;
+    position:fixed;
+    bottom:92%;
+    height:calc(100vh/13);
+    text-transform:uppercase;
+    display:inline-block;
+    left:0
+    
+}
+
+/*h6 styling (for all)*/
+h6,
+.h6{
+    color: gray !important;
+    font-size:85% !important
+}
+
+/*td styling (for all)*/
+td,
+.td{
+    color:#800020!important;
+    margin-left:1000px ! important;
+    align-items:"center" !important;
+}
+
+/*th styling (for all)*/
+th,
+.th{
+    font-size:70.1%;
+    align-items:"center" !important;
+}
+
+/*td styling for time tag*/
+#td_time {
+    width:140px;
+    justify-self:"center" !important;
+}
+
+/*td styling for car name tag*/
+#td_car {
+    justify-content:"center"
+}
+ 
+/*td styling for total taga*/
+#th_total {
+    width:23px
+}
+
+
+/*-----------------------------------looks.css--------------------------------------------------------*/
+/*--------------------------------Automobiles Galore--------------------------------------------------------*/
+/*-------------------------------------C-168--------------------------------------------------------*/

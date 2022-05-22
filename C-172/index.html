@@ -1,0 +1,97 @@
+<!----------------------------------------------------------------------C-168-------------------------------------------------------------------->
+<!--------------------------------------------------------------------index.html-------------------------------------------------------------------->
+
+
+<!--DOCTYPE tag-->
+<!DOCTYPE>
+
+<!--Head tags-->
+<head>
+  
+  <!--Script tags-->
+  <!--(i) Libraries-->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+ 
+  <!--Script tag (for frebase)-->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCB2qY9WChyGkquKRfQJ9pcJK3wPB2QoEU",
+      authDomain: "automobiles-galore.firebaseapp.com",
+      projectId: "automobiles-galore",
+      storageBucket: "automobiles-galore.appspot.com",
+      messagingSenderId: "23218797128",
+      appId: "1:23218797128:web:bdd4715dd85b4ed221f67d"
+    };
+
+    // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+  </script>  
+
+  <!--(ii) Local file-->
+  <script src="buttons.js"></script>
+  <script src="marker.js"></script>
+  
+  <!--Link tags-->
+  <link href="looks.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+
+<!--Body tag-->
+<body style="margin :0px; overflow: hidden;">
+
+   <!--Scene tag-->   
+   <a-scene gesture-detector id="scene_wrld" button-renderer embedded  vr-mode-ui="enabled:false" >
+
+   <!--Assets tag--> 
+   <a-assets>
+
+    <!--Asset-item tag-->
+    <a-asset-item id="pagani_huayra_bc_car" src="./pagani_huayra_bc/scene.gltf"></a-asset-item>
+</a-assets>
+
+<!--Camera tag-->
+<a-entity camera>
+</a-entity>
+
+<!--Marker tag-->
+<a-marker handle-marker type="pattern" url="pattern-pagani.patt" id="pagani_huayra_car_01" >
+
+  <!--Showcase tags-->
+  <a-entity visible="false"id="pagani_mrkr_sb" >
+  <a-entity rotation="-90 0 0" position="0 0 -1" text="align:center;font:exo2bold;width:5;color:black;value:PAGANI Huayra BC"></a-entity>
+  <a-entity rotation="-90 0 0" position="0 0 -0.75" text="align:center;font:exo2bold;width:3;color:orange;value:US $3,500"></a-entity>
+  <a-box width="2.7" height="1.7" depth="2.3" position="0 0 -0.4" rotation="0 90 -90" opacity="0.6"></a-box>
+  <a-entity gesture-handler rotation="270 180 180" position="0 0 0" scale="0.5 0.5 0.5"  gltf-model="#pagani_huayra_bc_car" ></a-entity>
+  </a-entity>
+</a-marker>
+</a-scene>
+
+
+<!--Dvision tag (for inital three buttons)-->
+<div id="div_btn_in" class="fixed-bottom">
+  <button class="btn btn-warning" id="purchase_btn"></button>
+  <button class="btn btn-warning" id="rate_btn"></button>
+  <button class="btn btn-warning" id="info_btn"></button>
+</div>
+
+<!--Dvision tag (for view orders button)-->
+<div id="div_btn_fl">
+
+<!--Button tag-->  
+<button class="btn btn-warning"  id="view_orders_btn">
+
+  <!--Strong tag-->
+  <strong>View Orders</strong>
+</button>               
+</div>
+</body>
+
+
+<!--------------------------------------------------------------------index.html-------------------------------------------------------------------->
+<!----------------------------------------------------------------------C-168-------------------------------------------------------------------->
